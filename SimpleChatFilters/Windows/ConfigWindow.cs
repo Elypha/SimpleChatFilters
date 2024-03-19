@@ -95,7 +95,7 @@ public class ConfigWindow : Window, IDisposable
 
             ImGui.Text("");
 
-            plugin.ImGuiHelper.BulletTextList(
+            Miosuke.UI.BulletTextList(
                 "Keybinding",
                 "you can configure it below",
                 new List<string> {

@@ -74,7 +74,7 @@ public class ChangelogWindow : Window, IDisposable
         );
         ImGui.Text("");
 
-        plugin.ImGuiHelper.ChangelogList(
+        Miosuke.UI.ChangelogList(
             "1.3.0.0 - 22 February 2024",
             new List<string>
             {
@@ -85,7 +85,7 @@ public class ChangelogWindow : Window, IDisposable
             }
         );
 
-        plugin.ImGuiHelper.ChangelogList(
+        Miosuke.UI.ChangelogList(
             "1.2.0.0 - 05 February 2024",
             new List<string>
             {
@@ -95,7 +95,7 @@ public class ChangelogWindow : Window, IDisposable
             }
         );
 
-        plugin.ImGuiHelper.ChangelogList(
+        Miosuke.UI.ChangelogList(
             "1.1.0.0 - 03 February 2024",
             new List<string>
             {
@@ -103,7 +103,7 @@ public class ChangelogWindow : Window, IDisposable
             }
         );
 
-        plugin.ImGuiHelper.ChangelogList(
+        Miosuke.UI.ChangelogList(
             "1.0.0.0 - 24 Janurary 2024",
             new List<string>
             {

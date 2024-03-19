@@ -35,8 +35,6 @@ public sealed partial class Plugin : IDalamudPlugin
     public MainWindow MainWindow { get; init; }
 
 
-    public PrintMessage PrintMessage { get; set; } = null!;
-    public ImGuiHelper ImGuiHelper { get; set; } = null!;
     public SimpleChatHandler SimpleChatHandler { get; set; } = null!;
     public SimpleToastHandler SimpleToastHandler { get; set; } = null!;
 
@@ -62,8 +60,6 @@ public sealed partial class Plugin : IDalamudPlugin
         WindowSystem.AddWindow(ChangelogWindow);
         WindowSystem.AddWindow(MainWindow);
 
-        PrintMessage = new PrintMessage(this);
-        ImGuiHelper = new ImGuiHelper();
         SimpleChatHandler = new SimpleChatHandler(this);
         SimpleToastHandler = new SimpleToastHandler(this);
 
@@ -91,8 +87,6 @@ public sealed partial class Plugin : IDalamudPlugin
         ChangelogWindow.Dispose();
         MainWindow.Dispose();
 
-        PrintMessage.Dispose();
-        ImGuiHelper.Dispose();
         SimpleChatHandler.Dispose();
         SimpleToastHandler.Dispose();
 
