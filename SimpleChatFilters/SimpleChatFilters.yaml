@@ -1,0 +1,28 @@
+author: Elypha
+name: SimpleChatFilters
+repo_url: https://github.com/Elypha/SimpleChatFilters
+punchline: The simple but ultimate market board plugin.
+description: |
+  Yet another simple plugin that allows you to create your own regex filters for all game chat messages!
+
+  Highlights:
+    - Support chat types (channels)
+    - Simple UI design
+
+  Check out the Introduction in Plugin Configuration for general usage, and Github page for more details.
+
+  If you have any feedback or suggestions, feel free to contact me on Discord or Github. I'm always open to new ideas and improvements. Enjoy!
+tags:
+  - Chat
+  - Message
+  - Log
+  - Regex
+  - Elypha
+category_tags:
+  - Utility
+  - UI
+  - Other
+
+# in the images folder on D17:
+# - icon should be 512x512 named with 'icon.png'
+# - preview images shoulld be 730x380 named with 'image1.png' up to 5
