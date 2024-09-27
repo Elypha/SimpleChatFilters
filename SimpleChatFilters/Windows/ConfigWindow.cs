@@ -81,28 +81,6 @@ public class ConfigWindow : Window, IDisposable
 
         if (ImGui.CollapsingHeader("Features & UI Introduction"))
         {
-            ImGui.TextColored(
-                new Vector4(245f, 220f, 80f, 255f) / 255f,
-                "> Below is a detailed manual.\n" +
-                "> I recommend to read only the sections you are interested.\n" +
-                "> Please checkout the changelog so that you can keep up with all the new features."
-            );
-
-            if (ImGui.Button($"Open Changelog Window"))
-            {
-                plugin.ChangelogWindow.Toggle();
-            }
-
-            ImGui.Text("");
-
-            Miosuke.UI.BulletTextList(
-                "Keybinding",
-                "you can configure it below",
-                new List<string> {
-                    "All these can be configured with an optional delay.",
-                    "Remember you can search multiple items without waiting for the previous ones to finish. All your query will be added to the cache sequentially.",
-                }
-            );
 
 
             ImGui.Text("");

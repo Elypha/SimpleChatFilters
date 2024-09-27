@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Dalamud.Game.Text;
 using System.Text.RegularExpressions;
 using System.Linq;
+using Miosuke;
 
 
 namespace SimpleChatFilters;
@@ -47,7 +48,7 @@ public partial class SimpleChatHandler
 
 
 
-    public void OnChat(XivChatType type, uint senderId, ref SeString sender, ref SeString message, ref bool isHandled)
+    public void OnChat(XivChatType type, int timestamp, ref SeString sender, ref SeString message, ref bool isHandled)
     {
         if (!plugin.Config.ChatFilterEnabled) return;
         if (isHandled) return;
@@ -57,7 +58,7 @@ public partial class SimpleChatHandler
         // GM message
         if (GmMessage().IsMatch(chatType.ToString()))
         {
-            Service.PluginLog.Warning($"[SimpleChatFilters] GM message: '{chatType}:{message.TextValue}'");
+            Service.Log.Warning($"[SimpleChatFilters] GM message: '{chatType}:{message.TextValue}'");
             return;
         }
 

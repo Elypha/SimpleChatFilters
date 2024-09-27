@@ -20,6 +20,7 @@ using System.Globalization;
 using System.Linq;
 using System.Numerics;
 using System;
+using Miosuke.UiHelper;
 
 
 namespace SimpleChatFilters;
@@ -240,7 +241,7 @@ public class MainWindow : Window, IDisposable
 
         // ----------------- FilteredChatLog -----------------
         section = "FilteredChatLog";
-        ImGui.TextColored(Miosuke.UI.titleColour, "Filtered Messages");
+        ImGui.TextColored(Ui.ColourTitle, "Filtered Messages");
         ImGui.Separator();
         _w = ImGui.GetContentRegionAvail().X;
         _h = ImGui.GetContentRegionAvail().Y / 2f;
@@ -252,7 +253,7 @@ public class MainWindow : Window, IDisposable
         {
             ImGui.Text(message.Type.ToString());
             ImGui.NextColumn();
-            Miosuke.UI.RenderSeString(message.Message);
+            Ui.RenderSeString(message.Message);
             ImGui.NextColumn();
             ImGui.Separator();
         }
@@ -266,7 +267,7 @@ public class MainWindow : Window, IDisposable
 
         // ----------------- ChatLog -----------------
         section = "ChatLog";
-        ImGui.TextColored(Miosuke.UI.titleColour, "Messages");
+        ImGui.TextColored(Ui.ColourTitle, "Messages");
         ImGui.Separator();
         _w = ImGui.GetContentRegionAvail().X;
         _h = ImGui.GetContentRegionAvail().Y;
@@ -278,7 +279,7 @@ public class MainWindow : Window, IDisposable
         {
             ImGui.Text(message.Type.ToString());
             ImGui.NextColumn();
-            Miosuke.UI.RenderSeString(message.Message);
+            Ui.RenderSeString(message.Message);
             ImGui.NextColumn();
             ImGui.Separator();
         }
@@ -377,7 +378,7 @@ public class MainWindow : Window, IDisposable
 
         // ----------------- FilteredToastLog -----------------
         section = "FilteredToastLog";
-        ImGui.TextColored(Miosuke.UI.titleColour, "Filtered Toast Messages");
+        ImGui.TextColored(Ui.ColourTitle, "Filtered Toast Messages");
         ImGui.Separator();
         _w = ImGui.GetContentRegionAvail().X;
         _h = ImGui.GetContentRegionAvail().Y / 2f;
@@ -398,7 +399,7 @@ public class MainWindow : Window, IDisposable
 
         // ----------------- ToastLog -----------------
         section = "ToastLog";
-        ImGui.TextColored(Miosuke.UI.titleColour, "Toast Messages");
+        ImGui.TextColored(Ui.ColourTitle, "Toast Messages");
         ImGui.Separator();
         _w = ImGui.GetContentRegionAvail().X;
         _h = ImGui.GetContentRegionAvail().Y;

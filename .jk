@@ -1,0 +1,6 @@
+make = """
+    dotnet build \
+    SimpleChatFilters/SimpleChatFilters.csproj \
+    -c Release \
+    -o "D:/apps/dalamud_jp_plugins/SimpleChatFilters"
+"""

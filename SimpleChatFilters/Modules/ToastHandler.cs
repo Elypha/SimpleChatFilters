@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using Dalamud.Game.Gui.Toast;
 using System.Linq;
+using Miosuke;
 
 
 namespace SimpleChatFilters;
@@ -89,7 +90,7 @@ public class SimpleToastHandler
         }
         catch (System.Exception e)
         {
-            Service.PluginLog.Error($"[SimpleChatFilters] Error in ProcessToast: {e}");
+            Service.Log.Error($"[SimpleChatFilters] Error in ProcessToast: {e}");
         }
     }
 
